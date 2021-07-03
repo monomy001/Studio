@@ -12,3 +12,14 @@ monogatari.component ('studio').template (() => {
 		</div>
 	`;
 });
+
+//appending required scripts dependency
+[
+    'https://code.jquery.com/jquery-latest.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'
+].map((src)=>{
+    var script = document.createElement('script');
+    script.src = src;
+    script.type = 'text/javascript';
+    document.getElementsByTagName('head')[0].appendChild(script);
+})
